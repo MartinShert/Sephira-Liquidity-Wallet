@@ -1,0 +1,78 @@
+
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wallet-screen::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 20px 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+ .wallet-screen {
+  position: relative;    
+  width: 100vw;      /* ✅ Full viewport width — no side gap */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  overflow: hidden;
+}
+
+
+.wallet-screen::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('../assets/warped-mesh.svg') repeat;
+  opacity: 0.15; /* Adjust for subtlety */
+  pointer-events: none;
+}
+
+
+
+
+
+.wolf-image {
+  width: 120px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.wallet-screen h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.wallet-screen button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wallet-screen button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}  
